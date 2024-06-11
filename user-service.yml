@@ -3,14 +3,19 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
     username: sa
-    password: 
+    password:
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    orders_is_empty: User's order is empty.
 
 token:
-  expiration_time: 5640000010
+  expiration_time: 864000000
   # secret: YOUR_SECRETKEY_20240202_FOR_SPRING_CLOUD_LOGIN
   # secret: 20240206_YOUR_SECRETKEY_20240202_FOR_SPRING_CLOUD_LOGIN_#1
   # secret: APPLE_YOUR_SECRETKEY_20240202_FOR_SPRING_CLOUD_LOGIN_#1
   # secret: BANANA_YOUR_SECRETKEY_20240202_FOR_SPRING_CLOUD_LOGIN_#1
-  secret: '{cipher}12345678'
+  secret: "12345678901234567890123456789012"
 gateway:
-  ip: 127.0.0.1
+  ip: 172.18.0.5
