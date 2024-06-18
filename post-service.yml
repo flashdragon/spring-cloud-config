@@ -4,14 +4,6 @@ spring:
     url: jdbc:h2:mem:testdb
     username: sa
     password:
-
-order_service:
-  url: http://ORDER-SERVICE/order-service/%s/orders
-  exception:
-    orders_is_empty: User's order is empty.
-
 token:
   expiration_time: 864000000
   secret: "12345678901234567890123456789012"
-gateway:
-  ip: 172.18.0.5
